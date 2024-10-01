@@ -7,29 +7,26 @@
 #include <cassert>
 #include "Classchild.h"
 
-
 using namespace std;
-
 
 int main() {
 
 	setlocale(LC_ALL, "Russian");
 
-    //Cat cattest{ "1", 5, "1", "Белый" };
-    //Dog dogtest{ "2", 12, "2", "Мячик" };
+    Cat cattest{ "1", 5, "1", "Белый" };
+    Dog dogtest{ "2", 12, "2", "Мячик" };
 
-    //assert(cattest.age == 5);
-    //assert(cattest.name == "1");
-    //assert(cattest.breed == "1");
+    assert(cattest.getAge() == 5);
+    assert(cattest.getName() == "1");
+    assert(cattest.getBreed() == "1");
 
-    //assert(dogtest.age == 12);
-    //assert(dogtest.name == "2");
-    //assert(dogtest.breed == "2");
+    assert(dogtest.getAge() == 12);
+    assert(dogtest.getName() == "2");
+    assert(dogtest.getBreed() == "2");
 
 
     Animal* mira = new Cat("Мира", 1, "Сиамская", "Белый");
     Animal* psina = new Dog("Псина", 12, "Овчарка", "Мячик");
-
 
     //  Полиморфизм для вывода информации о животных
     printanimal(mira);   // Вызовет print() для кошки
@@ -40,6 +37,13 @@ int main() {
     // Освобождаем память, выделенную для объектов
     delete mira;   
     delete psina;  
+
+    //Cat mira("Мира", 1, "Сиамская", "Белый");
+    //Dog psina("Псина", 12, "Овчарка", "Мячик");
+
+    //printanimal( mira);
+    //printanimal( psina);
+
     return 0;
 }
 
