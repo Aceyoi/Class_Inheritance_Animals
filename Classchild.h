@@ -16,7 +16,11 @@ public:
 	size_t getAge() const { return age; }
 	string getBreed() const { return breed; }
 
-	// Конструктор // todo:
+
+	// Конструктор без параметров
+	Animal() : name(0), age(0), breed(0){}
+
+	// Конструктор с параметрами
 	Animal(string n, size_t a, string b) : name(n), age(a), breed(b) {
 		if (a < 0 || a > 20) { throw runtime_error("Ошибка: недопустимый возраст"); }
 	}
@@ -31,7 +35,7 @@ protected:
 	string name;    // Кличка животного
 	size_t age;     // Возраст животного
 	string breed;   // Порода животного
-}; /// get set
+}; 
 
 // Класс Cat наследуемый от Animal
 class Cat: public Animal {

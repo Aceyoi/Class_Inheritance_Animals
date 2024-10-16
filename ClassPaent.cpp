@@ -25,6 +25,8 @@ int main() {
     assert(dogtest.getBreed() == "2");
 
 
+
+
     Animal* mira = new Cat("Мира", 1, "Сиамская", "Белый");
     Animal* psina = new Dog("Псина", 12, "Овчарка", "Мячик");
 
@@ -37,12 +39,6 @@ int main() {
     // Освобождаем память, выделенную для объектов
     delete mira;   
     delete psina;  
-
-    //Cat mira("Мира", 1, "Сиамская", "Белый");
-    //Dog psina("Псина", 12, "Овчарка", "Мячик");
-
-    //printanimal( mira);
-    //printanimal( psina);
 
     return 0;
 }
